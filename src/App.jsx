@@ -4,6 +4,7 @@ const messages = ['Learn React ⚛️', 'Apply for jobs 💼', 'Invest your new 
 
 export default function App() {
   const [step, setStep] = useState(1);
+  const [test, setTest] = useState({ name: 'Gabriel' });
   // const step = 1;
 
   function handledPrevious() {
@@ -12,6 +13,11 @@ export default function App() {
 
   function handledNext() {
     if (step < 3) setStep(step + 1);
+
+    // BAD PRACTICE
+    // test.name = "Diego"
+
+    setTest({ name: 'Diego' });
   }
 
   return (
@@ -24,6 +30,7 @@ export default function App() {
 
       <p className='message'>
         Step {step}: {messages[step - 1]}
+        {/* {test.name} */}
       </p>
       <div className='buttons'>
         <button style={{ backgroundColor: '#7950f2', color: '#fff' }} onClick={handledPrevious}>
