@@ -4,7 +4,7 @@ const messages = ['Learn React ⚛️', 'Apply for jobs 💼', 'Invest your new 
 
 export default function App() {
   const [step, setStep] = useState(1);
-  const [test, setTest] = useState({ name: 'Gabriel' });
+  // const [test, setTest] = useState({ name: 'Gabriel' });
   // const step = 1;
 
   function handledPrevious() {
@@ -17,7 +17,7 @@ export default function App() {
     // BAD PRACTICE
     // test.name = "Diego"
 
-    setTest({ name: 'Diego' });
+    // setTest({ name: 'Diego' });
   }
 
   return (
